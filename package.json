@@ -1,0 +1,13 @@
+{
+    "scripts": {
+      "runner": "cypress open",
+      "html-report": "cypress run --spec cypress/e2e/webcom-lubricantes-accountstatus_OK.cy.js --browser chrome --headed"
+    },
+    "devDependencies": {
+      "cypress": "^13.1.0"
+    },
+    "dependencies": {
+      "cypress-mochawesome-reporter": "^3.5.1"
+    }
+  }
+  

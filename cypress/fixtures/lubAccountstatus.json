@@ -1,0 +1,16 @@
+{
+  "URL": "https://premgmt-comercial.cepsacorp.es/es/areaprivada/gestiones/lubricantesNEW/Estado-de-Cuentas",
+  "fOrdNumUp": ":nth-child(1) > .th-inner > .th-inner__order > :nth-child(1) > .s",
+  "fOrdNumDown": ":nth-child(1) > .th-inner > .th-inner__order > :nth-child(2) > .s",
+  "fDocDateUp": ":nth-child(2) > .th-inner > .th-inner__order > :nth-child(1) > .s",
+  "fDocDateDown": ":nth-child(2) > .th-inner > .th-inner__order > :nth-child(2) > .s",
+  "fExpDateUp": ":nth-child(3) > .th-inner > .th-inner__order > :nth-child(1) > .s",
+  "fExpDateDown": ":nth-child(3) > .th-inner > .th-inner__order > :nth-child(2) > .s",
+  "fAmountUp": ":nth-child(4) > .th-inner > .th-inner__order > :nth-child(1) > .s",
+  "fAmountDown": ":nth-child(4) > .th-inner > .th-inner__order > :nth-child(2) > .s",
+  "fCurrencyUp": ":nth-child(5) > .th-inner > .th-inner__order > :nth-child(1) > .s",
+  "fCurrencyDown": ":nth-child(5) > .th-inner > .th-inner__order > :nth-child(2) > .s",
+  "anRight": ".s-angle-right",
+  "anLeft": ".pagination-complex > .s-angle-left",
+  "downloadBtn": "input[type='submit']"
+}
