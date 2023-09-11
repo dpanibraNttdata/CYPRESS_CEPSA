@@ -3,6 +3,8 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   video: true,
   videoCompression: 15,
+  viewportWidth: 1280,
+  viewportHeight: 1400,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     reportPageTitle: 'CEPSA - CYPRESS',
