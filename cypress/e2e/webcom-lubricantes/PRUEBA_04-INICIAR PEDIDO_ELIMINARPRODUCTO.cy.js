@@ -40,8 +40,13 @@ describe('PRUEBA_01 - CAMBIAR PÁGINA', () => {
             cy.get(':nth-child(1) > :nth-child(5) > .d-flex > #order-amount').type('4')
 
             cy.get('tbody > :nth-child(1) > :nth-child(7) > a').click();
-            cy.wait(2000);
+            cy.get(':nth-child(3) > :nth-child(5) > .d-flex > #order-amount').type('5')
 
+            cy.get('tbody > :nth-child(3) > :nth-child(7) > a').click();
+            cy.wait(2000);
+            cy.get('tbody > :nth-child(1) > :nth-child(6) > a > .s').click();
+            cy.wait(2000);
+            cy.get('.modal__footer').click();
             //STEP3 RESUMEN
             cy.get('#summaryTable > .e-btn-primary').click();
             cy.wait(2000);
