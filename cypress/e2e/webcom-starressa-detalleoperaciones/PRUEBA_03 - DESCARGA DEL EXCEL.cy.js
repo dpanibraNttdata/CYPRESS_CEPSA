@@ -1,4 +1,9 @@
 describe('PRUEBA_03', () => {
+    beforeEach(() => {
+        // LOGIN SESSION ON PREMGMT
+        cy.loginPREMGMT('webcomstarressa', 'prueba1234');
+
+    });
     it('Descarga del Excel', () => {
         cy.fixture('starDetalleoperaciones').then((starDetOpe) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
