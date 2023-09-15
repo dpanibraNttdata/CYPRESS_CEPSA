@@ -1,5 +1,5 @@
 // WEBCOM-LUBRICANTES-ACCOUNTSTATUS
 
-import './PRUEBA_01 - FILTROS DE LA TABLA.cy';
-import './PRUEBA_02 - PAGINACIÓN DE LA TABLA.cy';
-import './PRUEBA_03 - DESCARGA DEL PDF.cy';
+import './01_RESULTADO/index.cy';
+import './02_TABLA/index.cy';
+import './03_DESCARGA/index.cy';
