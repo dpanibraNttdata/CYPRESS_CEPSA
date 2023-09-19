@@ -1,0 +1,7 @@
+// LOGIN - PREMGMT
+
+import './PRUEBA_01 - VALIDACION.cy';
+import './PRUEBA_02 - LOGIN_INCOMPLETO.cy';
+import './PRUEBA_03 - LOGIN_INCORRECTO.cy';
+import './PRUEBA_04 - LOGIN.cy';
+import './PRUEBA_05 - RECUPERAR_CONTRASEÑA.cy';
