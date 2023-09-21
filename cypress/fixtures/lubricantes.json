@@ -1,3 +1,4 @@
 {
-    "URL": "https://premgmt-comercial.cepsacorp.es/es/areaprivada/gestiones/lubricantesNEW/crear"
-  }
+  "URL": "https://premgmt-comercial.cepsacorp.es/es/areaprivada/gestiones/lubricantesNEW/crear",
+  "newOrderType": "ul > :nth-child(1) > label"
+}

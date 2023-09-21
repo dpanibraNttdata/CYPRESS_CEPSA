@@ -1,3 +1,5 @@
+import lubSupport from '../../../../../support/lubricantes';
+
 describe('STEP03 - 01-BUSCADOR - 01-CARGA_DE_FORMULARIO', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
@@ -9,19 +11,8 @@ describe('STEP03 - 01-BUSCADOR - 01-CARGA_DE_FORMULARIO', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    cy.get('ul > :nth-child(1) > label').click();
-                    cy.get('.b-common-form__actions__submit').click();
-
-                    cy.get('#reference').type('123456');
-                    cy.get('#supply_date').type('21/09/2023');
-
-                    cy.get('input#delivery_address').click({ force: true });
-                    cy.get('ul#ui-id-1').find('li').first().click();
-
-                    cy.get('input#billing_address').click({ force: true });
-                    cy.get('ul#ui-id-1').find('li').first().click();
-
-                    cy.get('.b-common-form__actions__submit').click();
+                    lubSupport.passSelectOrderType(config.newOrderType);
+                    lubSupport.passStep01OrderAddress();
 
                     cy.get('.main_title').should('have.text', 'Selecciona los productos');
                     cy.get('.form__block > :nth-child(1) > .custom-select').should('have.value', '');

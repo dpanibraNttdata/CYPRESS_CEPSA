@@ -1,12 +1,12 @@
 import lubSupport from '../../../../../support/lubricantes';
 
-describe('STEP03 -01-BUSCADOR - 02-BUSQUEDA_SIN_FILTROS', () => {
+describe('STEP03 - 02-TABLA - 02-LLENAR TABLA PRODUCTOS - SIMPLE', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('lubrimartin', 'lubrimartin');
     });
 
-    it('BUSQUEDA DE PRODUCTOS SIN FILTROS', () => {
+    it('LLENAR TABLA PRODUCTOS - SIMPLE', () => {
         cy.fixture('lubricantes').then((config) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
@@ -15,7 +15,13 @@ describe('STEP03 -01-BUSCADOR - 02-BUSQUEDA_SIN_FILTROS', () => {
                     lubSupport.passStep01OrderAddress();
 
                     cy.get('.b-common-form__actions__submit').click();
-                    cy.get('.results-orders--text', { timeout: 15000 }).should('include.text', 'Se han encontrado ');
+
+                    cy.get(':nth-child(1) > :nth-child(5) > .d-flex > #order-amount', { timeout: 20000 }).type(10);
+                    cy.get('tbody > :nth-child(1) > :nth-child(7) > a').click();
+
+                    cy.get('tbody > :nth-child(1) > :nth-child(7) > p').should('have.text', 'Añadido');
+
+                    cy.get('.cta-accordion--title').should('have.text', 'Total productos (1)');
                 }
             });
         });
