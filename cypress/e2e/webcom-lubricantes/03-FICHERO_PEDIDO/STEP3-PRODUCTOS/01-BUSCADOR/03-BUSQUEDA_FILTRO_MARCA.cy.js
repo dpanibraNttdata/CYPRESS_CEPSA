@@ -11,10 +11,10 @@ describe('STEP03 - 01-BUSCADOR - 03-BUSQUEDA_FILTRO_MARCA', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    lubSupport.passSelectOrderType(config.newOrderType);
-                    lubSupport.passStep01OrderAddress();
+                    lubSupport.passSelectFileOrder('');
+                    lubSupport.passStep01RepeatOrder();
 
-                    cy.get('.form__block > :nth-child(1) > .custom-select').select('Cepsa');
+                    cy.get('.form__block > :nth-child(1) > .custom-select', { timeout: 20000 }).select('Cepsa');
                     cy.get('.b-common-form__actions__submit').click();
                     cy.get('.results-orders--text', { timeout: 15000 }).should('include.text', 'Se han encontrado ');
 

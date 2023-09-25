@@ -11,8 +11,8 @@ describe('STEP04 - 01-CARGA_DE_PANTALLA', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    lubSupport.passSelectOrderType(config.newOrderType);
-                    lubSupport.passStep01OrderAddress();
+                    lubSupport.passSelectRepeatOrder('5611504886');
+                    lubSupport.passStep01RepeatOrder();
 
                     cy.get('.b-common-form__actions__submit').click();
                     lubSupport.fillProduct(1, 10);

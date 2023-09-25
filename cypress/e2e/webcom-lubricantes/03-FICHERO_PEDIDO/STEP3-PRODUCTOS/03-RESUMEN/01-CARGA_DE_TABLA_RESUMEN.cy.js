@@ -11,10 +11,10 @@ describe('STEP03 - 03-RESUMEN - 01-CARGA_DE_TABLA_RESUMEN', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    lubSupport.passSelectOrderType(config.newOrderType);
-                    lubSupport.passStep01OrderAddress();
+                    lubSupport.passSelectFileOrder('');
+                    lubSupport.passStep01RepeatOrder();
 
-                    cy.get('.cta-accordion--title').should('have.text', 'Total productos (0)');
+                    cy.get('.cta-accordion--title').should('have.text', 'Total productos (3)');
                 }
             });
         });

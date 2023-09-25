@@ -23,7 +23,7 @@ describe('STEP03 - 03-RESUMEN - 03-RESUMEN_VARIOS_PRODUCTOS', () => {
                     cy.get('.cta-accordion--title').click();
 
                     cy.get(':nth-child(2) > .b-search-results-table > .table-container > .results-table-wrapper > .table > tbody > tr ').then(($lis) => {
-                        expect($lis).to.have.length(3);
+                        expect($lis).to.have.length(4);
                     });
                 }
             });

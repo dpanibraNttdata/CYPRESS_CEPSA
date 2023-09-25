@@ -11,18 +11,18 @@ describe('STEP04 - 02-VALIDACION_PRODUCTOS', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    lubSupport.passSelectOrderType(config.newOrderType);
-                    lubSupport.passStep01OrderAddress();
+                    lubSupport.passSelectFileOrder('');
+                    lubSupport.passStep01RepeatOrder();
 
                     cy.get('.b-common-form__actions__submit').click();
                     lubSupport.fillProduct(1, 10);
-                    lubSupport.fillProduct(3, 20);
-                    lubSupport.fillProduct(5, 30);
+                    lubSupport.fillProduct(5, 20);
+                    lubSupport.fillProduct(6, 30);
 
                     cy.get('#summaryTable > .e-btn-primary').click();
-
-                    cy.get('tbody > tr', { timeout: 20000 }).then(($lis) => {
-                        expect($lis).to.have.length(2);
+                    cy.get('.main_subtitle', { timeout: 20000 }).should('have.text', 'Por favor, revisa que todos los datos sean correctos');
+                    cy.get('tbody > tr').then(($lis) => {
+                        expect($lis).to.have.length(8);
                     });
                 }
             });

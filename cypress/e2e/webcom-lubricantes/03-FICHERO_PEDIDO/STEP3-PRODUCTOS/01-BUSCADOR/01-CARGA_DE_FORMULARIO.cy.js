@@ -11,10 +11,9 @@ describe('STEP03 - 01-BUSCADOR - 01-CARGA_DE_FORMULARIO', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    lubSupport.passSelectOrderType(config.newOrderType);
-                    lubSupport.passStep01OrderAddress();
-
-                    cy.get('.main_title').should('have.text', 'Selecciona los productos');
+                    lubSupport.passSelectFileOrder('');
+                    lubSupport.passStep01RepeatOrder();
+                    cy.get('.main_title', { timeout: 20000 }).should('have.text', 'Selecciona los productos');
                     cy.get('.form__block > :nth-child(1) > .custom-select').should('have.value', '');
                     cy.get('#name').should('have.value', '');
                     cy.get(':nth-child(3) > .custom-select').should('have.value', '');

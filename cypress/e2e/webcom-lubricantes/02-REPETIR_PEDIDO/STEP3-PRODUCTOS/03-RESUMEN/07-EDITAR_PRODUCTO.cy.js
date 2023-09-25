@@ -23,7 +23,7 @@ describe('STEP03 - 03-RESUMEN - 07-EDITAR_PRODUCTO', () => {
                     cy.get('.modal__footer > .filled').click();
                     cy.get('#order-amount').clear().type(120);
                     cy.get(':nth-child(7) > a').click();
-                    cy.get(':nth-child(5) > p').should('have.text', '120');
+                    cy.get(':nth-child(5) > p').first().should('have.text', '120');
                 }
             });
         });

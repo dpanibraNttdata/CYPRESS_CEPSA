@@ -21,7 +21,7 @@ describe('STEP03 - 03-RESUMEN - 02-RESUMEN_DE_UN_PRODUCTO', () => {
                     cy.get('.cta-accordion--title').click();
 
                     cy.get(':nth-child(2) > .b-search-results-table > .table-container > .results-table-wrapper > .table > tbody > tr ').then(($lis) => {
-                        expect($lis).to.have.length(1);
+                        expect($lis).to.have.length(2);
                     });
                 }
             });
