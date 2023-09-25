@@ -11,10 +11,10 @@ describe('STEP03 -01-BUSCADOR - 02-BUSQUEDA_SIN_FILTROS', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    lubSupport.passSelectOrderType(config.newOrderType);
-                    lubSupport.passStep01OrderAddress();
+                    lubSupport.passSelectFileOrder('');
+                    lubSupport.passStep01RepeatOrder();
 
-                    cy.get('.b-common-form__actions__submit').click();
+                    cy.get('.b-common-form__actions__submit', { timeout: 20000 }).click();
                     cy.get('.results-orders--text', { timeout: 15000 }).should('include.text', 'Se han encontrado ');
                 }
             });

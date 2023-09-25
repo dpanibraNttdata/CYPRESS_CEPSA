@@ -11,10 +11,10 @@ describe('STEP03 - 01-BUSCADOR - 06-BUSQUEDA_FILTRO_TIPO', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    lubSupport.passSelectOrderType(config.newOrderType);
-                    lubSupport.passStep01OrderAddress();
+                    lubSupport.passSelectFileOrder('');
+                    lubSupport.passStep01RepeatOrder();
 
-                    cy.get(':nth-child(4) > .custom-select').should('be.disabled');
+                    cy.get(':nth-child(4) > .custom-select', { timeout: 20000 }).should('be.disabled');
 
                     // value="B" ->BASES
                     // value="E" ->ENERGETICOS

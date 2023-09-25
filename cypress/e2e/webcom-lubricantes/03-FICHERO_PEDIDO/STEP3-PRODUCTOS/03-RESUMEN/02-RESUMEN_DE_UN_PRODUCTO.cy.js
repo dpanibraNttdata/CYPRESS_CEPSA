@@ -11,17 +11,17 @@ describe('STEP03 - 03-RESUMEN - 02-RESUMEN_DE_UN_PRODUCTO', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    lubSupport.passSelectOrderType(config.newOrderType);
-                    lubSupport.passStep01OrderAddress();
+                    lubSupport.passSelectFileOrder('');
+                    lubSupport.passStep01RepeatOrder();
 
-                    cy.get('.b-common-form__actions__submit').click();
+                    cy.get('.b-common-form__actions__submit').click({ multiple: true });
                     lubSupport.fillProduct(1, 10);
 
-                    cy.get('.cta-accordion--title').should('have.text', 'Total productos (1)');
+                    cy.get('.cta-accordion--title').should('have.text', 'Total productos (4)');
                     cy.get('.cta-accordion--title').click();
 
                     cy.get(':nth-child(2) > .b-search-results-table > .table-container > .results-table-wrapper > .table > tbody > tr ').then(($lis) => {
-                        expect($lis).to.have.length(1);
+                        expect($lis).to.have.length(4);
                     });
                 }
             });

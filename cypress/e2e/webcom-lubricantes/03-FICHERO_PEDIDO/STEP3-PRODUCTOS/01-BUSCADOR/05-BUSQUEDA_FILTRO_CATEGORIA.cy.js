@@ -11,8 +11,8 @@ describe('STEP03 - 01-BUSCADOR - 05-BUSQUEDA_FILTRO_CATEGORIA', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    lubSupport.passSelectOrderType(config.newOrderType);
-                    lubSupport.passStep01OrderAddress();
+                    lubSupport.passSelectFileOrder('');
+                    lubSupport.passStep01RepeatOrder();
 
                     // value="B" ->BASES
                     // value="E" ->ENERGETICOS
@@ -23,7 +23,7 @@ describe('STEP03 - 01-BUSCADOR - 05-BUSQUEDA_FILTRO_CATEGORIA', () => {
                     // value="X" ->VARIOS
                     // value="Z" ->ENVASES EMBALAJES
 
-                    cy.get(':nth-child(3) > .custom-select').select('BASES');
+                    cy.get(':nth-child(3) > .custom-select', { timeout: 20000 }).select('BASES');
                     cy.get('.b-common-form__actions__submit').click();
                     cy.get('.results-orders--text', { timeout: 15000 }).should('include.text', 'Se han encontrado 0 productos');
 

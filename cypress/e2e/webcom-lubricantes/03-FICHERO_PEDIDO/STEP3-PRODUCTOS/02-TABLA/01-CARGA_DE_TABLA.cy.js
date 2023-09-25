@@ -11,12 +11,11 @@ describe('STEP03 - 02-TABLA - 01-CARGA_DE_TABLA', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    lubSupport.passSelectOrderType(config.newOrderType);
-                    lubSupport.passStep01OrderAddress();
+                    lubSupport.passSelectFileOrder('');
+                    lubSupport.passStep01RepeatOrder();
 
-                    cy.get('.b-common-form__actions__submit').click();
-
-                    cy.get('.table > tbody > tr', { timeout: 20000 }).then(($lis) => {
+                    cy.get('.b-common-form__actions__submit').click({ multiple: true });
+                    cy.get('.mb32 > .table-container > .results-table-wrapper > .table > tbody > tr', { timeout: 20000 }).then(($lis) => {
                         expect($lis).to.have.length(777);
                     });
                 }

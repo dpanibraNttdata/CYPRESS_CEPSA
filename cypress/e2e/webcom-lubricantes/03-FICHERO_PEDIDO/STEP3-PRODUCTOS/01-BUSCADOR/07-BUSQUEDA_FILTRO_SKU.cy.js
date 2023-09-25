@@ -11,10 +11,10 @@ describe('STEP03 - 01-BUSCADOR - 07-BUSQUEDA_FILTRO_SKU', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    lubSupport.passSelectOrderType(config.newOrderType);
-                    lubSupport.passStep01OrderAddress();
+                    lubSupport.passSelectFileOrder('');
+                    lubSupport.passStep01RepeatOrder();
 
-                    cy.get('#sku').type('512541300');
+                    cy.get('#sku', { timeout: 20000 }).type('512541300');
                     cy.get('.b-common-form__actions__submit').click();
                     cy.get('.results-orders--text', { timeout: 15000 }).should('include.text', 'Se han encontrado 1 productos');
 

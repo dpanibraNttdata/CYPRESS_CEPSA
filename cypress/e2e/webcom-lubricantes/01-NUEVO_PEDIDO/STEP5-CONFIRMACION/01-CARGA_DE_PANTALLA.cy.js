@@ -24,6 +24,10 @@ describe('STEP04 - 01-CARGA_DE_PANTALLA', () => {
                     cy.get('.b-common-form__actions__submit', {timeout: 20000}).click();
                     
                     cy.get('.container > .title', {timeout: 20000}).should('include.text', 'se ha realizado con éxito.');
+                    cy.get('.container > .title', {timeout: 20000}).should('include.text', 'se ha realizado con éxito.');
+                    cy.get('table > tbody > tr').then(($lis) => {
+                        expect($lis).to.have.length(6);
+                    });
                 }
             });
         });

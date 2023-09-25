@@ -11,15 +11,15 @@ describe('STEP03 - 03-RESUMEN - 04-ELIMINAR_TODOS_LOS_PRODUCTOS', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    lubSupport.passSelectOrderType(config.newOrderType);
-                    lubSupport.passStep01OrderAddress();
+                    lubSupport.passSelectFileOrder('');
+                    lubSupport.passStep01RepeatOrder();
 
-                    cy.get('.b-common-form__actions__submit').click();
+                    cy.get('.b-common-form__actions__submit').click({ multiple: true });
                     lubSupport.fillProduct(1, 10);
-                    lubSupport.fillProduct(3, 20);
-                    lubSupport.fillProduct(5, 30);
+                    lubSupport.fillProduct(5, 20);
+                    lubSupport.fillProduct(6, 30);
 
-                    cy.get('.cta-accordion--title').should('have.text', 'Total productos (3)');
+                    cy.get('.cta-accordion--title').should('have.text', 'Total productos (6)');
                     cy.get('.cta-accordion__wrapper > .hide-on-mobile').click();
                     cy.get('.modal__footer').click();
 

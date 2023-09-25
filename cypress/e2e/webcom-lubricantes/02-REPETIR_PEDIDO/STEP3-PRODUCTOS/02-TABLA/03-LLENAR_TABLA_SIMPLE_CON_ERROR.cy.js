@@ -17,7 +17,7 @@ describe('STEP03 - 02-TABLA - 03-SIMPLE_CON_ERROR', () => {
                     cy.get('.b-common-form__actions__submit').click({ multiple: true });
 
                     cy.get(':nth-child(1) > :nth-child(5) > .d-flex > #order-amount', { timeout: 20000 }).type('null');
-                    cy.get('tbody > :nth-child(1) > :nth-child(7) > a').should('have.text', 'Añadir');
+                    cy.get('tbody > :nth-child(1) > :nth-child(7) > a').first().should('have.text', 'Añadir');
                     cy.get('.cta-accordion--title').should('have.text', 'Total productos (1)');
                 }
             });

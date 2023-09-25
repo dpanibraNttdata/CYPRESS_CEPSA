@@ -11,19 +11,22 @@ describe('STEP04 - 01-CARGA_DE_PANTALLA', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    lubSupport.passSelectOrderType(config.newOrderType);
-                    lubSupport.passStep01OrderAddress();
+                    lubSupport.passSelectFileOrder('');
+                    lubSupport.passStep01RepeatOrder();
 
                     cy.get('.b-common-form__actions__submit').click();
                     lubSupport.fillProduct(1, 10);
-                    lubSupport.fillProduct(3, 20);
-                    lubSupport.fillProduct(5, 30);
+                    lubSupport.fillProduct(5, 20);
+                    lubSupport.fillProduct(6, 30);
 
                     cy.get('#summaryTable > .e-btn-primary').click();
 
                     cy.get('.b-common-form__actions__submit', {timeout: 20000}).click();
                     
                     cy.get('.container > .title', {timeout: 20000}).should('include.text', 'se ha realizado con éxito.');
+                    cy.get('table > tbody > tr').then(($lis) => {
+                        expect($lis).to.have.length(8);
+                    });
                 }
             });
         });

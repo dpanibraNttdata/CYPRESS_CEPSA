@@ -11,27 +11,27 @@ describe('STEP03 - 03-RESUMEN - 06-ELIMINAR_VARIOS_PRODUCTOS', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    lubSupport.passSelectOrderType(config.newOrderType);
-                    lubSupport.passStep01OrderAddress();
+                    lubSupport.passSelectFileOrder('');
+                    lubSupport.passStep01RepeatOrder();
 
-                    cy.get('.b-common-form__actions__submit').click();
+                    cy.get('.b-common-form__actions__submit').click({ multiple: true });
                     lubSupport.fillProduct(1, 10);
-                    lubSupport.fillProduct(3, 20);
-                    lubSupport.fillProduct(5, 30);
+                    lubSupport.fillProduct(5, 20);
+                    lubSupport.fillProduct(6, 30);
 
-                    cy.get('.cta-accordion--title').should('have.text', 'Total productos (3)');
+                    cy.get('.cta-accordion--title').should('have.text', 'Total productos (6)');
                     cy.get('.cta-accordion--title').click();
 
-                    cy.get('tbody > :nth-child(3) > :nth-child(6) > a > .s').click();
+                    cy.get('.cta-accordion__content--panel > section > section > div > .results-table-wrapper > table > tbody > :nth-child(3) >  :nth-child(6) > a > .s').click();
                     cy.get('.modal__footer').click();
 
-                    cy.get('tbody > :nth-child(1) > :nth-child(6) > a > .s').click();
+                    cy.get('.cta-accordion__content--panel > section > section > div > .results-table-wrapper > table > tbody > :nth-child(3) >  :nth-child(6) > a > .s').click();
                     cy.get('.modal__footer').click();
 
-                    cy.get('.cta-accordion--title').should('have.text', 'Total productos (1)');
+                    cy.get('.cta-accordion--title').should('have.text', 'Total productos (4)');
 
                     cy.get(`:nth-child(${1}) > :nth-child(5) > .d-flex > #order-amount`).should('have.value', '');
-                    cy.get(`:nth-child(${5}) > :nth-child(5) > .d-flex > #order-amount`).should('have.value', '');
+                    cy.get(`:nth-child(${4}) > :nth-child(5) > .d-flex > #order-amount`).should('have.value', '');
                 }
             });
         });

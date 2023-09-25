@@ -11,17 +11,9 @@ describe('STEP02- 03-FORMULARIO_VALIDO', () => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {
                 onLoad: () => {
-                    lubSupport.passSelectOrderType(config.newOrderType);
+                    lubSupport.passSelectFileOrder();
 
-                    cy.get('#reference').type('123456');
-                    cy.get('#supply_date').type('21/09/2023');
-
-                    cy.get('input#delivery_address').click({ force: true });
-                    cy.get('ul#ui-id-1').find('li').first().click();
-
-                    cy.get('input#billing_address').click({ force: true });
-                    cy.get('ul#ui-id-1').find('li').first().click();
-
+                    cy.get('#supply_date', {timeout: 20000}).type('26/09/2023');
                     cy.get('.b-common-form__actions__submit').should('not.be.disabled');
                 }
             });
