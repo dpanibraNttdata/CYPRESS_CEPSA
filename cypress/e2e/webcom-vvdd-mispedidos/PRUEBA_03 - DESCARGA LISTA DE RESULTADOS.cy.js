@@ -7,8 +7,8 @@ describe('PRUEBA_03', () => {
         cy.fixture('vvddMisPedidos').then((vvddMisPed) => {
             cy.visit(vvddMisPed.URL);
             cy.wait(8000);
+            cy.get('a.link').click();
+            cy.screenshot();
         });
-        cy.get('a.link').click();
-        cy.screenshot();
     });
 });

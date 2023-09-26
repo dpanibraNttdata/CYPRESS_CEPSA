@@ -6,7 +6,7 @@ describe('STEP04 - 01-CARGA_DE_PANTALLA_ERROR', () => {
         cy.loginPREMGMT('lubrimartin', 'lubrimartin');
     });
 
-    it('VALIDACION CARGA PANTALLA DE RESUMEN DEL PEDIDO', () => {
+    it('VALIDACION CARGA PANTALLA VALIDACION DEL PEDIDO', () => {
         cy.fixture('lubricantes').then((config) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {

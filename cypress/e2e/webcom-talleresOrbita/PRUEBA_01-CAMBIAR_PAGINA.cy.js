@@ -4,7 +4,7 @@ describe('PRUEBA_01 - CAMBIAR PÁGINA', () => {
         cy.loginPREMGMT('lubrimartin', 'lubrimartin');
 
     });
-    it('CONSULTAR INFORME', () => {
+    it('CAMBIAR PÁGINA', () => {
 
         cy.fixture('talleresOrbita').then((config) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS

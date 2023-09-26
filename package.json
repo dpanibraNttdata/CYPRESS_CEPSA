@@ -1,7 +1,7 @@
 {
   "scripts": {
     "runner": "cypress open",
-    "html-report": "cypress run --spec cypress/e2e/webcom-vvdd-mispedidos --browser chrome --headed"
+    "html-report": "cypress run --spec cypress/e2e/webcom-vvdd-mispedidos/index.cy.js --headed"
   },
   "devDependencies": {
     "cypress": "^13.1.0"

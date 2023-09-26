@@ -1,10 +1,10 @@
-describe('PRUEBA_01 - CAMBIAR PÁGINA', () => {
+describe('PRUEBA_04 - EDITAR DATOS DOMICILIO', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('WEBCOMCO2', 'prueba1234');
 
     });
-    it('CONSULTAR INFORME', () => {
+    it('EDITAR DATOS DOMICILIO', () => {
 
         cy.fixture('detalleContrato').then((config) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS

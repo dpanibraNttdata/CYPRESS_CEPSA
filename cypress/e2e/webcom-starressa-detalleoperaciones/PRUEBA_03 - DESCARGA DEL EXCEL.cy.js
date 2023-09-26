@@ -1,10 +1,10 @@
-describe('PRUEBA_03', () => {
+describe('PRUEBA_03 - DESCARGA DEL EXCEL', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('webcomstarressa', 'prueba1234');
 
     });
-    it('Descarga del Excel', () => {
+    it('DESCARGA DEL EXCEL', () => {
         cy.fixture('starDetalleoperaciones').then((starDetOpe) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(starDetOpe.URL);

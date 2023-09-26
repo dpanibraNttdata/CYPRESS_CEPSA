@@ -1,17 +1,18 @@
-describe('PRUEBA_01 - CAMBIAR PÁGINA', () => {
-    beforeEach(() => {
+describe('PRUEBA_02 - SeleccionarPromociones', () => {
+    it('SeleccionarPromociones', () => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('WEBCOMCO2', 'prueba1234');
 
-    });
-    it('CONSULTAR INFORME', () => {
-
+        // CONFIGURACIONES DEL WIDGET
         cy.fixture('vipDistrict').then((config) => {
-            // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
-            cy.visit(config.URL);
-            cy.wait(7000);
-            cy.get('#react-webcom-gow-vipdistrict > .m-promos > .m-promos__main > .m-promos__container > .m-promos__wrapper > :nth-child(4) > .m-promos__promo-content > #151573').click();
-            cy.get('.m-promo-sheet__link').click();
+
+            // ACCESSO AL WIDGET - WEBCOM-VIPDISTRICT
+            cy.visit(config.URL, {
+                onLoad: () => {
+                    cy.get('#react-webcom-gow-vipdistrict > .m-promos > .m-promos__main > .m-promos__container > .m-promos__wrapper > :nth-child(4) > .m-promos__promo-content > #151573').click();
+                    cy.get('.m-promo-sheet__link').click();
+                }
+            });
         });
     });
 });
