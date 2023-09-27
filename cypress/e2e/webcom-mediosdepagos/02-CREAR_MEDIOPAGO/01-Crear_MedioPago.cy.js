@@ -1,12 +1,12 @@
 
 
-describe('PRUEBA_01 - CAMBIAR PÁGINA', () => {
+describe('PRUEBA_01 - CREAR MEDIO PAGO', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('WEBCOMCO2', 'prueba1234');
 
     });
-    it('CONSULTAR INFORME', () => {
+    it('CREAR MEDIO PAGO', () => {
 
         cy.fixture('mediosDePagos').then((config) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS

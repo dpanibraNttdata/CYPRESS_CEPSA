@@ -1,5 +1,5 @@
 
-describe('PRUEBA_01 - CAMBIAR PÁGINA', () => {
+describe('PRUEBA_01 - SELECCIONAR CONTRATO', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('WEBCOMCO2', 'prueba1234');

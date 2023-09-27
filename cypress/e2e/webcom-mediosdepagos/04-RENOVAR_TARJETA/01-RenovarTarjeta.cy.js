@@ -1,11 +1,11 @@
 
-describe('PRUEBA_01 - CAMBIAR PÁGINA', () => {
+describe('PRUEBA_01 - RENOVAR TARJETA', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('WEBCOMCO2', 'prueba1234');
 
     });
-    it('CONSULTAR INFORME', () => {
+    it('RENOVAR TARJETA', () => {
 
         cy.fixture('mediosDePagos').then((config) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS

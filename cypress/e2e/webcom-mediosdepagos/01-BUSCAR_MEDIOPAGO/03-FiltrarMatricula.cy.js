@@ -1,6 +1,6 @@
 
 
-describe('PRUEBA_01 - CAMBIAR PÁGINA', () => {
+describe('PRUEBA_01 - FILTRAR MATRICULA', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('WEBCOMCO2', 'prueba1234');

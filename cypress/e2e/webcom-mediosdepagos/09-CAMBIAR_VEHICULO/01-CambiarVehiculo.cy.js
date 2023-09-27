@@ -1,11 +1,11 @@
 
-describe('PRUEBA_01 - CAMBIAR PÁGINA', () => {
+describe('PRUEBA_01 - CAMBIAR VEHICULO', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('WEBCOMCO2', 'prueba1234');
 
     });
-    it('CONSULTAR INFORME', () => {
+    it('CAMBIAR VEHICULO', () => {
 
         cy.fixture('mediosDePagos').then((config) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
