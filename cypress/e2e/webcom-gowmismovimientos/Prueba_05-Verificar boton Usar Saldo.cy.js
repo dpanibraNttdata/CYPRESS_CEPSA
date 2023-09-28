@@ -1,23 +1,21 @@
-describe('PRUEBA_01 - CONSULTA DE VISTAS', () => {
+describe('PRUEBA_05 - USAR SALDO', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('webcomptv02', 'prueba1234');
 
     });
-    it('CONSULTAR MOVIMIENTOS', () => {
+    it('USAR SALDO', () => {
 
         cy.fixture('gowMismovimientos').then((config) => {
             // ACCESSO AL WIDGET - WEBCOM-GOWMISMOVIMIENTOS
             cy.visit(config.URL);
-            cy.wait(7000);
+            cy.wait(4000);
 
             //CERRAMOS MODAL
             cy.get('.fancybox-close-small').click();
+            //CAMBIAR PÀGINA
+            cy.get('.b-available-credit__link').click();
 
-            cy.get('.custom-select').select('Concepto');
-            cy.get('.custom-select').select('Provincia');
-
-            cy.get('.custom-select').select('Estación');
 
         });
     });

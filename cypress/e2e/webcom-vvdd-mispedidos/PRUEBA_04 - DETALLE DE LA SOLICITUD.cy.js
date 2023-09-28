@@ -4,8 +4,8 @@ describe('PRUEBA_04', () => {
         cy.fixture('vvddMisPedidos').then((vvddMisPed) => {
             cy.visit(vvddMisPed.URL);
             cy.wait(5000);
+            cy.get('table').find('tbody').first().find('tr').first().find('td').last().find('a').click();
+            cy.screenshot();
         });
-        cy.get('table').find('tbody').first().find('tr').first().find('td').last().find('a').click();
-        cy.screenshot();
     });
 });

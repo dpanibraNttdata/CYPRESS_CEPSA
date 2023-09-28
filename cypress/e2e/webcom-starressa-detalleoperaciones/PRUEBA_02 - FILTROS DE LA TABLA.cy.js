@@ -1,10 +1,10 @@
-describe('PRUEBA_02', () => {
+describe('PRUEBA_02 - FILTROS DE LA TABLA', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('webcomstarressa', 'prueba1234');
 
     });
-    it('Prueba de Filtros', () => {
+    it('FILTROS DE LA TABLA', () => {
         cy.fixture('starDetalleoperaciones').then((starDetOpe) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(starDetOpe.URL);

@@ -1,10 +1,10 @@
-describe('PRUEBA_01-FILTRO_TALLARES', () => {
+describe('PRUEBA_02-FILTRO_TALLARES', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('lubrimartin', 'lubrimartin');
 
     });
-    it('CONSULTAR INFORME', () => {
+    it('FILTRO_TALLARES', () => {
         cy.fixture('talleresOrbita').then((config) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL);

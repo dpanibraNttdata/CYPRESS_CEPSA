@@ -1,12 +1,12 @@
 import lubSupport from '../../../../support/lubricantes';
 
-describe('STEP04 - 01-CARGA_DE_PANTALLA_ERROR', () => {
+describe('STEP05 - 01-CARGA_DE_PANTALLA_ERROR', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('lubrimartin', 'lubrimartin');
     });
 
-    it('VALIDACION CARGA PANTALLA DE RESUMEN DEL PEDIDO', () => {
+    it('VALIDACION CARGA PANTALLA CONFIRMACION DEL PEDIDO - ERROR', () => {
         cy.fixture('lubricantes').then((config) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(config.URL, {

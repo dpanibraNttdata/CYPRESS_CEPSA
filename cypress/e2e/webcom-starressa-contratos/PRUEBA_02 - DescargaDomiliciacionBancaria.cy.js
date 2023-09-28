@@ -1,10 +1,10 @@
-describe('PRUEBA_01 - CAMBIAR PÁGINA', () => {
+describe('PRUEBA_02 - DESCARGA DOMICILIO BANCARIO', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('WEBCOMCO2', 'prueba1234');
 
     });
-    it('CONSULTAR INFORME', () => {
+    it('DESCARGA DOMICILIO BANCARIO', () => {
 
         cy.fixture('detalleContrato').then((config) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS

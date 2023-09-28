@@ -1,11 +1,10 @@
-describe('PRUEBA_01 - CONSULTA DE VISTAS', () => {
+describe('PRUEBA_04 - PAGINACIÓN', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('webcomptv02', 'prueba1234');
-
     });
-    it('CONSULTAR MOVIMIENTOS', () => {
 
+    it('PAGINACIÓN', () => {
         cy.fixture('gowMismovimientos').then((config) => {
             // ACCESSO AL WIDGET - WEBCOM-GOWMISMOVIMIENTOS
             cy.visit(config.URL);

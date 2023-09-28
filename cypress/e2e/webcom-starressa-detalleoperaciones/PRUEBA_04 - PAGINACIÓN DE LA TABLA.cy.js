@@ -1,10 +1,10 @@
-describe('PRUEBA_03', () => {
+describe('PRUEBA_04 - PAGINACION', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('webcomstarressa', 'prueba1234');
 
     });
-    it('Paginación de la tabla', () => {
+    it('PAGINACION', () => {
         cy.fixture('starDetalleoperaciones').then((starDetOpe) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(starDetOpe.URL);
@@ -19,13 +19,13 @@ describe('PRUEBA_03', () => {
             cy.get('.s-angle-right').click();
             cy.get('.s-angle-right').click();
             cy.get('.s-angle-right').click();
-            cy.get('#counterNumber').contain('5');
+            cy.get('#counterNumber').should('have.value', 5);
 
             cy.get('.pagination-complex > .s-angle-left').click();
             cy.get('.pagination-complex > .s-angle-left').click();
             cy.get('.pagination-complex > .s-angle-left').click();
             cy.get('.pagination-complex > .s-angle-left').click();
-            cy.get('#counterNumber').contain('1');
+            cy.get('#counterNumber').should('have.value', 1);
 
             cy.screenshot();
         });

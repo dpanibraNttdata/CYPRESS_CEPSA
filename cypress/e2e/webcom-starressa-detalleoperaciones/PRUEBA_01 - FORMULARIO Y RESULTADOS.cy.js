@@ -1,10 +1,10 @@
-describe('PRUEBA_01', () => {
+describe('PRUEBA_01 - FORMULARIO Y RESULTADO', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('webcomstarressa', 'prueba1234');
 
     });
-    it('Formularios y Resultados', () => {
+    it('FORMULARIO Y RESULTADOS', () => {
         cy.fixture('starDetalleoperaciones').then((starDetOpe) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(starDetOpe.URL);
