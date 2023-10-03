@@ -1,0 +1,7 @@
+// WEBCOM-MISFACTURAS - 01-BUSCADOR
+
+import './01-CARGA_WIDGET.cy';
+import './02-CAMPO_TIPO_NEGOCIO.cy';
+import './03-CAMPO_TIPO_NEGOCIO_STARRESA.cy';
+import './04-CAMPO_CONTRATO.cy';
+import './05-CAMPO_FECHAS.cy';
