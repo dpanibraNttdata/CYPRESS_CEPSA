@@ -1,8 +1,8 @@
+// WEBCOM-STARRESSA-CONTRATOS
 
-import './PRUEBA_01 - BusquedaContrato.cy';
-import './PRUEBA_02 - DescargaDomiliciacionBancaria.cy';
-import './PRUEBA_03 - EditarDatosIdentificativos.cy';
-import './PRUEBA_04 - EditarDatosDomiliciacion.cy';
-import './PRUEBA_05 - EditarDatosContacto.cy';
-import './PRUEBA_06 - EditarDatosSubContrato.cy'
-
+import './PRUEBA_01-BUSQUEDA_CONTRATO.cy';
+import './PRUEBA_02-DESCARGA_DOMICILIACION_BANCARIA.cy';
+import './PRUEBA_03-EDITAR_DATOS_INDENTIFICATIVOS.cy';
+import './PRUEBA_04-EDITAR_DATOS_DOMILICIACION.cy';
+import './PRUEBA_05-EDITAR_DATOS_CONTRATO.cy';
+import './PRUEBA_06-EDITAR_DATOS_SUBCONTRATO.cy';

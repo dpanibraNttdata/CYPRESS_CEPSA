@@ -1,5 +1,5 @@
 // WEBCOM-MISCONSUMOS
 
-import './PRUEBA_01 - SeleccionarGraficos OtrosConsumos.cy';
-import './PRUEBA_02 - SeleccionarGraficos Repostajes.cy';
+import './PRUEBA_01-GRAFICOS_OTROS_CONSUMOS.cy';
+import './PRUEBA_02-GRAFICOS_REPOSTAJES.cy';
 

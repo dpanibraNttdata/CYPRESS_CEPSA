@@ -1,5 +1,5 @@
 // ---PLANTILLA DESKTOP
-describe('PRUEBA_01 - NOMBRE_DEL_ARCHIVO', () => {
+describe('PRUEBA_01-NOMBRE_DEL_ARCHIVO', () => {
     beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('lubrimartin', 'lubrimartin');
@@ -30,7 +30,7 @@ describe('PRUEBA_01 - NOMBRE_DEL_ARCHIVO', () => {
 });
 
 // ---PLANTILLA NPM
-describe('PRUEBA_01 - NOMBRE_DEL_ARCHIVO', () => {
+describe('PRUEBA_01-NOMBRE_DEL_ARCHIVO', () => {
     it('Descripción/Validación de la prueba', () => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('WEBCOMCO2', 'prueba1234');
