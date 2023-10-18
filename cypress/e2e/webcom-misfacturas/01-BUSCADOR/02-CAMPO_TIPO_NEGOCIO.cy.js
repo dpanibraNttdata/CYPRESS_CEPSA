@@ -1,8 +1,9 @@
 describe('01-BUSCADOR - 02-CAMPO_TIPO_NEGOCIO', () => {
-    it('Buscar por campo Tipo de Negocio', () => {
+    beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('webcomercial19', 'prueba1234');
-
+    });
+    it('Buscar por campo Tipo de Negocio', () => {
         // CONFIGURACIONES DEL WIDGET
         cy.fixture('misfacturas').then((config) => {
 
@@ -10,6 +11,8 @@ describe('01-BUSCADOR - 02-CAMPO_TIPO_NEGOCIO', () => {
             cy.visit(config.URL, {
                 onLoad: () => {
                     cy.get('.block-header-text', { timeout: 20000 }).should('have.text', 'Seleccionados (0)');
+                    cy.get('#from-date').type('2022-02-22');
+                    cy.get('#to-date').type('2022-05-20');
 
                     cy.get("#tipo-negocio").select("CCP");
                     cy.get("#vext-gen1081 form > div.form-group > input").click({ multiple: true });

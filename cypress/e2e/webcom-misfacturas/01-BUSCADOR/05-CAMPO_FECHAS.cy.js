@@ -1,8 +1,9 @@
 describe('01-BUSCADOR - 05-CAMPO_FECHAS', () => {
-    it('Buscar por fechas', () => {
+    beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('webcomercial19', 'prueba1234');
-
+    });
+    it('Buscar por fechas', () => {
         // CONFIGURACIONES DEL WIDGET
         cy.fixture('misfacturas').then((config) => {
 

@@ -5,7 +5,7 @@ describe('PRUEBA_04', () => {
                 cy.get('input#login-user').type('lubrimartin');
                 cy.get('input#login-password').type('lubrimartin');
                 cy.get(':nth-child(13) > .e-btn-primary').click();
-                cy.url({ timeout: 100000 }).should('eq', 'https://premgmt-comercial.cepsacorp.es/es/areaprivada?from_login=x');
+                cy.get('.main_title', { timeout: 200000 }).should('have.text', 'Date de alta para ver tus facturas');
             }
         });
     });

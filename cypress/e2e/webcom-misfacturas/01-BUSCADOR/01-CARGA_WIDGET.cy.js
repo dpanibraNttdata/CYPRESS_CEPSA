@@ -1,8 +1,9 @@
 describe('01-BUSCADOR - 01-CARGA_WIDGET', () => {
-    it('Validación de la carga de widget', () => {
+    beforeEach(() => {
         // LOGIN SESSION ON PREMGMT
         cy.loginPREMGMT('webcomercial19', 'prueba1234');
-
+    });
+    it('Validación de la carga de widget', () => {
         // CONFIGURACIONES DEL WIDGET
         cy.fixture('misfacturas').then((config) => {
 

@@ -9,8 +9,8 @@ Cypress.Commands.add('loginPREMGMT', (email, password) => {
   cy.session("LOGIN PREMGMT", () => {
     cy.visit('https://premgmt-comercial.cepsacorp.es/es/login?from=particular', {
       onLoad: () => {
-        cy.get('input#login-user').type(email);
-        cy.get('input#login-password').type(password);
+        cy.get('#login-user').type(email);
+        cy.get('#login-password').type(password);
         cy.get('button[type="submit"]').click();
       },
     });

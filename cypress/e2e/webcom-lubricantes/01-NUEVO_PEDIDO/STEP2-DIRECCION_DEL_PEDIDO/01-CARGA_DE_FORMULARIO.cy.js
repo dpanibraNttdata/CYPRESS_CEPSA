@@ -22,5 +22,3 @@ describe('STEP02 - 01-CARGA_DE_FORMULARIO', () => {
         });
     });
 });
-
-
