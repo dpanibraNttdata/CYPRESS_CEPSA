@@ -6,7 +6,7 @@ describe('TABLA - 02', () => {
         cy.fixture('lubAccountstatus').then((lubAccStat) => {
             // ACCESSO AL WIDGET - WEBCOM-LUBRICANTES-ACCOUNTSTATUS
             cy.visit(lubAccStat.URL);
-            cy.wait(lubAccSta.widgetLoadTime);
+            cy.wait(lubAccStat.widgetLoadTime);
 
             // PAGINACIÓN HASTA LA PÁGINA 6
             cy.get(lubAccStat.anRight).click({ multiple: true });

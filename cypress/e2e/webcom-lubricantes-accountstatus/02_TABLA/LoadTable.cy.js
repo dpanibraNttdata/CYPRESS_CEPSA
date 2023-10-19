@@ -9,7 +9,7 @@ describe('TABLA - 01', () => {
             cy.wait(lubAccSta.widgetLoadTime);
 
             // Comprobar correcta carga de la tabla
-            cy.get('.table > tbody > tr.stripped').should(($lis) => {
+            cy.get('.table > tbody > tr.stripped').then(($lis) => {
                 // La tabla debe tener 10 filas
                 expect($lis).to.have.length(10);
                 cy.screenshot('TABLA CON 10 FILAS');
